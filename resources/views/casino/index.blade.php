@@ -22,7 +22,7 @@
                       </tr>
                       @foreach($customers as $customer)
                       <tr>
-                        <th></th>
+                        <th>1</th>
                         <td>{{ $customer->dateregis }}</td>
                         <td>{{ $customer->casino_name }}</td>
                         <td>{{ $customer->customer_name }}</td>

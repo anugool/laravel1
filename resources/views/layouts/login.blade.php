@@ -1,4 +1,4 @@
-<?php include 'header.php';?>
+@include('layouts.header')
 <div class="page login-page">
       <div class="container">
         <div class="form-outer text-center d-flex align-items-center">
@@ -18,4 +18,3 @@
         </div>
       </div>
     </div>
-<?php include 'footer.php';?>
