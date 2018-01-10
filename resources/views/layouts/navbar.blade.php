@@ -3,7 +3,12 @@
       <div class="side-navbar-wrapper">
         <div class="sidenav-header d-flex align-items-center justify-content-center">
           <div class="sidenav-header-inner text-center">
-            <h2 class="h5 text-uppercase">Anderson Hardy</h2>
+            @if(Auth::check())
+            <h2 class="h5 text-uppercase">{{ Auth::user()->name }}</h2>
+            @endif
+            @if(!Auth::check())
+            <h2 class="h5 text-uppercase">Kbet</h2>
+            @endif
           </div>
         </div>
         <div class="main-menu">

@@ -7,10 +7,12 @@
         <div class="card">
           <div class="card-header d-flex align-items-center">
             <h2 class="h5 display">บันทึกข้อมูลลูกค้า</h2>
-                        @include('layouts.errors')
+
           </div>
           <div class="card-body">
 
+            @include('partials.errors')
+            @include('partials.success')
 
             <form action="/customer" method="post" class="form-horizontal">
               {{ csrf_field() }}
@@ -72,8 +74,6 @@
                   <button type="submit" class="btn btn-primary">Save changes</button>
                 </div>
               </div>
-
-
 
             </form>
 

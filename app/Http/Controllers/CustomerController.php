@@ -8,11 +8,19 @@ use App\Customers;
 class CustomerController extends Controller
 {
     //
+    public function __construct(){
+
+
+      $this->middleware('auth')->except(['index']);
+
+    }
+
+
+
     public function index(){
 
-      $customers = Customers::showCustomer();
 
-      return view('casino.index', compact('customers'));
+      return view('session.create');
 
     }
 
@@ -47,7 +55,8 @@ class CustomerController extends Controller
 
       $customers = Customers::showCustomer();
 
-      return view('casino.index', compact('customers'));
+
+      return back()->with('success' , 'Insert customer successfully');
 
 
     }

@@ -5,7 +5,12 @@
               <div class="navbar-header">
                   <div class="brand-text d-none d-md-inline-block"><strong class="text-primary">ระบบจัดการข้อมูลลูกค้า</strong></div></a></div>
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
-                <li class="nav-item"><a href="login.html" class="nav-link logout">Logout<i class="fa fa-sign-out"></i></a></li>
+                @if(!Auth::check())
+                <li class="nav-item"><a href="login" class="nav-link logout">Login<i class="fa fa-sign-out"></i></a></li>
+                @endif
+                @if(Auth::check())
+                <li class="nav-item"><a href="logout" class="nav-link logout">Logout<i class="fa fa-sign-out"></i></a></li>
+                @endif
               </ul>
             </div>
           </div>

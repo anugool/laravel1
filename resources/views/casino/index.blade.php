@@ -21,8 +21,11 @@
                         <th>แหล่งที่มา</th>
                       </tr>
                       @foreach($customers as $customer)
+
                       <tr>
-                        <th>1</th>
+                        <td>
+                          {{$num = $num+1}}
+                        </td>
                         <td>{{ $customer->dateregis }}</td>
                         <td>{{ $customer->casino_name }}</td>
                         <td>{{ $customer->customer_name }}</td>

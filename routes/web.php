@@ -12,11 +12,18 @@
 */
 
 Route::get('/', 'CustomerController@index')->name('home');
+
 Route::get('customer', 'CustomerController@create');
 Route::post('customer', 'CustomerController@store');
 
 
+Route::get('login', 'SessionController@create');
+Route::post('login', 'SessionController@store');
 
-/*Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');*/
+
+Route::get('logout', 'SessionController@destroy');
+
+
+
+//Auth::routes();
