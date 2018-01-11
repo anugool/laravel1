@@ -2,12 +2,28 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use Illuminate\Http\Request;
+use App\Http\Requests\Admin\LoginRequest;
 use App\Customers;
 
 class SessionController extends Controller
 {
     //
+
+    public function index(){
+
+       if(Auth::check()){
+
+         return redirect('casino.index');
+
+       }else{
+
+         return view('session.create');
+       }
+    }
+
+
     public function create(){
 
       return view('session.create');
@@ -18,7 +34,7 @@ class SessionController extends Controller
     public function store(){
 
 
-      if(! auth()->attempt(request(['name', 'password'])))
+      if(! auth()->attempt(request(['username', 'password'])))
       {
 
           return back()
@@ -27,13 +43,11 @@ class SessionController extends Controller
           };
 
           $customers = Customers::showCustomer();
-
-          $customers = Customers::showCustomer();
           $num = 0;
 
           return view('casino.index', compact('customers', 'num'));
 
-          return redirect()->home();
+
 
         }
 

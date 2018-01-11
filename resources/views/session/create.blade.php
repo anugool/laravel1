@@ -7,13 +7,12 @@
 
             @include('partials.errors')
 
-            <form action="/login" method="post" id="login-form" >
+            <form action="login" method="post" id="login-form" >
 
                {{ csrf_field() }}
 
               <div class="form-group">
-
-                <input id="login-username" type="text" name="name" required>
+                <input id="login-username" type="text" name="username" required>
               </div>
 
               <div class="form-group">

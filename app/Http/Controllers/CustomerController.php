@@ -10,8 +10,7 @@ class CustomerController extends Controller
     //
     public function __construct(){
 
-
-      $this->middleware('auth')->except(['index']);
+        $this->middleware('auth');
 
     }
 
@@ -19,8 +18,11 @@ class CustomerController extends Controller
 
     public function index(){
 
+      $customers = Customers::showCustomer();
+      $num = 0;
 
-      return view('session.create');
+      return view('casino.index', compact('customers', 'num'));
+
 
     }
 

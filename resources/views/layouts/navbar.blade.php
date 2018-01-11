@@ -14,7 +14,7 @@
         <div class="main-menu">
           <ul id="side-main-menu" class="side-menu list-unstyled">
 
-            <li> <a href="/"><i class="icon-form"></i><span>แสดงข้อมลลูกค้า</span></a></li>
+            <li> <a href="index"><i class="icon-form"></i><span>แสดงข้อมลลูกค้า</span></a></li>
             <li><a href="customer"> <i class="icon-home"></i><span>เพิ่มข้อมูลลูกค้า</span></a></li>
 
           </ul>

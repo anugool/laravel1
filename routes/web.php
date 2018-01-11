@@ -11,18 +11,19 @@
 |
 */
 
-Route::get('/', 'CustomerController@index')->name('home');
+Route::get('index', 'CustomerController@index')->name('home');
 
 Route::get('customer', 'CustomerController@create');
 Route::post('customer', 'CustomerController@store');
 
 
-Route::get('login', 'SessionController@create');
+Route::get('/', 'SessionController@index');
 Route::post('login', 'SessionController@store');
 
 
 
 Route::get('logout', 'SessionController@destroy');
+
 
 
 
