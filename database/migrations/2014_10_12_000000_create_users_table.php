@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('password', 60);
             $table->string('name',60);
             $table->integer('role_id')->unsigned()->default(3);
+            $table->rememberToken();
             $table->timestamps();
         });
     }
