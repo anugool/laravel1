@@ -18,6 +18,7 @@
                         <th>คาสิโน</th>
                         <th>ชื่อลูกค้า</th>
                         <th>โปรโมชั่น</th>
+                        <th>Line_id</th>
                         <th>แหล่งที่มา</th>
                       </tr>
                       @foreach($customers as $customer)
@@ -30,6 +31,7 @@
                         <td>{{ $customer->casino_name }}</td>
                         <td>{{ $customer->customer_name }}</td>
                         <td>{{ $customer->promotion }}</td>
+                        <td>{{ $customer->line_id }}</td>
                         <td>{{ $customer->optradio }}</td>
                       </tr>
                       @endforeach

@@ -12,6 +12,7 @@ class Customers extends Model
     'dateregis',
     'casino_name',
     'promotion',
+    'line_id',
     'optradio',
 ];
 

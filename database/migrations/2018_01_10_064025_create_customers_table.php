@@ -21,7 +21,8 @@ class CreateCustomersTable extends Migration
             $table->string('casino_name');
             $table->string('promotion');
             $table->string('optradio');
-            
+            $table->string('line_id');
+
             $table->timestamps();
         });
     }

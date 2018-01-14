@@ -10,21 +10,20 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', function () {
+    return view('session.create');
+});
 
 Route::get('index', 'CustomerController@index')->name('home');
-
 Route::get('customer', 'CustomerController@create');
 Route::post('customer', 'CustomerController@store');
-
-
-Route::get('/', 'SessionController@index');
 Route::post('login', 'SessionController@store');
-
-
-
 Route::get('logout', 'SessionController@destroy');
 
 
 
 
-//Auth::routes();
+/*Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('session', 'SessionController');
+Route::resource('customer', 'CustomerController');*/

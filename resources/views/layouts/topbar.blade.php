@@ -9,7 +9,7 @@
                 <li class="nav-item"><a href="login" class="nav-link logout">Login<i class="fa fa-sign-out"></i></a></li>
                 @endif
                 @if(Auth::check())
-                <li class="nav-item"><a href="logout" class="nav-link logout">Logout<i class="fa fa-sign-out"></i></a></li>
+                <li class="nav-item"><a href="logout" class="nav-link logout" onclick="var result = confirm('Are you sure you wish to logout?');">Logout<i class="fa fa-sign-out"></i></a></li>
                 @endif
               </ul>
             </div>

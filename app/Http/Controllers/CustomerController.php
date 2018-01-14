@@ -18,6 +18,7 @@ class CustomerController extends Controller
 
     public function index(){
 
+
       $customers = Customers::showCustomer();
       $num = 0;
 
@@ -40,7 +41,8 @@ class CustomerController extends Controller
         'dateregis' => 'required',
         'casino_name' => 'required',
         'promotion' => 'required',
-        'optradio' => 'required',
+        'line_id' => 'required',
+        'optradio' => 'required'
 
       ]);
 
@@ -51,6 +53,7 @@ class CustomerController extends Controller
         'dateregis' => request('dateregis'),
         'casino_name' => request('casino_name'),
         'promotion' => request('promotion'),
+        'line_id' => request('line_id'),
         'optradio' => request('optradio')
 
       ]);

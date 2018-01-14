@@ -1,4 +1,5 @@
 @include('layouts.header')
+@if(!Auth::check())
 <div class="page login-page">
       <div class="container">
         <div class="form-outer text-center d-flex align-items-center">
@@ -27,3 +28,4 @@
         </div>
       </div>
     </div>
+    @endif

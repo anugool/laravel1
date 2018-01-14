@@ -49,6 +49,14 @@
                 </div>
               </div>
 
+              <div class="line"></div>
+              <div class="form-group row">
+                <label class="col-sm-2 form-control-label">Line_id</label>
+                <div class="col-sm-10">
+                  <input id="promotion" name="line_id" type="text" placeholder="โปรโมชั่น" class="form-control" required>
+                </div>
+              </div>
+
                 <div class="line"></div>
               <div class="form-group row">
                 <label class="col-sm-2 form-control-label">แหล่งที่มา</label>

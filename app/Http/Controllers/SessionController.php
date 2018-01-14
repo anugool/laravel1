@@ -11,17 +11,13 @@ class SessionController extends Controller
 {
     //
 
-    public function index(){
+    public function __construct(){
 
-       if(Auth::check()){
+      $this->middleware('guest', ['except' => 'destroy']);
 
-         return redirect('casino.index');
-
-       }else{
-
-         return view('session.create');
-       }
     }
+    
+
 
 
     public function create(){
@@ -45,7 +41,9 @@ class SessionController extends Controller
           $customers = Customers::showCustomer();
           $num = 0;
 
-          return view('casino.index', compact('customers', 'num'));
+          return redirect()->home();
+
+          //return view('casino.index', compact('customers', 'num'));
 
 
 
